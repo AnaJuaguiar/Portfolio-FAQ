@@ -1,17 +1,12 @@
-console.log("click!!!!");
 const accordion = document.querySelectorAll(".accordion__question");
-console.log("click2", accordion);
+
 accordion.forEach((item) => {
-  console.log("click2!!!!");
   item.addEventListener("click", (event) => {
-    console.log("click3!!!!");
     let accColapse = item.nextElementSibling;
 
     if (!item.classList.contains("open")) {
       accColapse.style.display = "block";
       let accHeight = accColapse.clientHeight;
-
-      console.log("click4");
 
       setTimeout(() => {
         accColapse.style.height = accHeight + "px";
